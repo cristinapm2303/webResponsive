@@ -1,0 +1,43 @@
+
+body {
+    background-color: #1a1a1a; /* Negro oscuro */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    padding: 3%;
+}
+
+.navbar{
+    width: 100%;
+}
+
+
+.login-container {
+    background-color: #2c2c2c; /* Gris oscuro */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.3); /* Sombra verde */
+    width: 100%;
+    max-width: 400px;
+}
+
+.text-green {
+    color: #00ff00; /* Verde brillante */
+}
+
+.btn-green {
+    background-color: #00cc00; /* Verde más oscuro */
+    color: white;
+    border: none;
+}
+
+.btn-green:hover {
+    background-color: #009900; /* Verde más oscuro al pasar el mouse */
+}
