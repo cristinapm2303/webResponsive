@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const userEmail = localStorage.getItem("userEmail");
-    const userEmailElement = document.getElementById("user-email");
+    const userEmailElement = document.getElementById("userEmail");
     const bienvenida = document.getElementById("bienvenida");
     const biblioteca = document.getElementById("biblioteca");
     const listas = document.getElementById("listas");
@@ -9,38 +9,37 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!userEmail) {
         window.location.href = "login.html"; 
     } else {
-        userEmailElement.textContent = `Usuario: ${userEmail}`;
+        userEmailElement.textContent = `Usuario: ${userEmail ?? ""}`;
     }
 
         // Función para mostrar las pantallas
-        function showScreen(screenId) {
+        // function showScreen(screenId) {
             // Ocultar todas las pantallas
-            bienvenida.style.display = "none";
-            biblioteca.style.display = "none";
-            listas.style.display = "none";
+            // bienvenida.style.display = "none";
+            // biblioteca.style.display = "none";
+            // listas.style.display = "none";
     
             // Mostrar la pantalla seleccionada
-            document.getElementById(screenId).style.display = "block";
-        }
+        //     document.getElementById(screenId).style.display = "block";
+        // }
     
         // Agregar eventos de clic a los enlaces de navegación
         document.getElementById("linkBienvenida").addEventListener("click", function () {
-            showScreen("bienvenida");
+            // showScreen("bienvenida");
         });
         document.getElementById("linkBiblioteca").addEventListener("click", function () {
-            showScreen("biblioteca");
+            // showScreen("biblioteca");
         });
         document.getElementById("linkListas").addEventListener("click", function () {
-            showScreen("listas");
+            // showScreen("listas");
         });
     
         // Mostrar la pantalla de bienvenida por defecto
-        showScreen("bienvenida");
+        // showScreen("bienvenida");
 
 
     logoutButton.addEventListener("click", function () {
-        localStorage.removeItem("loggedIn");
-        localStorage.removeItem("userEmail");
+        localStorage.clear()
         console.log("Sesión eliminada"); // Verificar en consola
         console.log(localStorage.getItem("loggedIn")); // Verificar que 'loggedIn' ya no existe
     
