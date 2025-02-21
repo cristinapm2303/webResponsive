@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const userEmail = localStorage.getItem("userEmail");
+    const userEmail = sessionStorage.getItem("userEmail");
     const userEmailElement = document.getElementById("userEmail");
     const bienvenida = document.getElementById("bienvenida");
     const biblioteca = document.getElementById("biblioteca");
@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     logoutButton.addEventListener("click", function () {
-        localStorage.clear()
+        sessionStorage.clear()
         console.log("Sesión eliminada"); // Verificar en consola
-        console.log(localStorage.getItem("loggedIn")); // Verificar que 'loggedIn' ya no existe
+        console.log(sessionStorage.getItem("loggedIn")); // Verificar que 'loggedIn' ya no existe
     
         window.location.href = "login.html"; 
     });

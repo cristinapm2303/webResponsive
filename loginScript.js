@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (email === userDB.email && password === userDB.password) {
 
             // Guardar sesión en localStorage
-            localStorage.setItem("loggedIn", "true");
-            localStorage.setItem("userEmail", email);
+            sessionStorage.setItem("loggedIn", "true");
+            sessionStorage.setItem("userEmail", email);
 
             // Redirigir a la página de dashboard
             window.location.href = "dashboard.html";
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Comprobamos si ya hay una sesión iniciada
-    if (localStorage.getItem("loggedIn") === "true") {
+    if (sessionStorage.getItem("loggedIn") === "true") {
         console.log("user logged in");
         window.location.href = "dashboard.html"; // Redirigir si ya está logueado
     }
