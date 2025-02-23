@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorar canción</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="rating.js"></script>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a href="dashboard.html">
+            <img class="navbar-brand"id="logo" src="img/MUSICAPP.png" style="height: fit-content; width: 50px;"></img>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html" id="linkBienvenida">Bienvenida</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rating.html" id="linkValoraciones">Mis valoraciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="listas.html" id="linkListas">Listas Personalizadas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="miperfil.html" id="linkPerfil">Mi perfil</a>
+              </li>
+              <li class="nav-item">
+                <button id="logout-btn" type="button" class="btn btn-primary w-100" >Cerrar Sesión</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+      <div id="valorarForm" class="card" style="display: none;">
+          <div class="card-header">
+              <h3>VALORAR CANCIÓN</h3>
+          </div>
+          <div class="card-body">
+              <form id="formValoracion">
+                  <div class="form-group">
+                      <img id="imgCancion" alt="Imagen de la Canción" class="img-fluid mb-3" style="width: 250px; height: 250px;">
+                  </div>
+                  <div class="form-group">
+                      <label for="nombreCancion">Nombre de la Canción</label>
+                      <input type="text" class="form-control" id="nombreCancion" value="nombreCancion" readonly>
+                  </div>
+                  <div class="form-group">
+                      <label for="artistaCancion">Artista</label>
+                      <input type="text" class="form-control" id="artistaCancion" value="artistaCancion" readonly>
+                  </div>
+                  <div class="form-group">
+                      <label for="valoracion">Valoración</label>
+                      <select class="form-control" id="valoracion">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label for="comentario">Comentario</label>
+                      <textarea class="form-control" id="comentario" rows="3"></textarea>
+                  </div>
+                  <br>
+                  <button type="submit" class="btn btn-primary">Guardar valoración</button>
+              </form>
+            </div>
+      </div>
+
+      <h3 class="mt-4">MIS VALORACIONES</h3><br>
+      <ul id="valoracionesGuardadas" class="list-group">
+      </ul>
+    </div>
+
+</body>
+</html>

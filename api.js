@@ -1,5 +1,5 @@
-const clientId = '6495750786a44e008f46f8fe6c0c687d'; // Reemplaza con tu client ID de Spotify
-const clientSecret = 'aa5a3e2fd3784273b001581a07bb5e6c'; // Reemplaza con tu client secret de Spotify
+const clientId = '6495750786a44e008f46f8fe6c0c687d'; // Client ID de Spotify
+const clientSecret = 'aa5a3e2fd3784273b001581a07bb5e6c'; // Client secret de Spotify
 
 // Obtener token de acceso
 async function getAccessToken() {
@@ -39,7 +39,13 @@ function resultadoBusqueda(tracks) {
         listItem.innerHTML = `
             <img src="${track.album.images[0].url}" alt="${track.name}" class="img-thumbnail" style="width: 50px; height: 50px;">
             <strong>${track.name}</strong> - ${track.artists[0].name}
+            <button class="btn btn-primary" type="button" onclick="valorarCancion('${track.album.images[0].url}','${track.name}','${track.artists[0].name}')">Valorar canción</button>
         `;
         results.appendChild(listItem);
     });
+}
+
+function valorarCancion(imgCancion,nombreCancion,artistaCancion) {
+    const url = `rating.html?imgCancion=${encodeURIComponent(imgCancion)}&nombreCancion=${encodeURIComponent(nombreCancion)}&artistaCancion=${encodeURIComponent(artistaCancion)}`;
+    window.location.href = url;
 }
