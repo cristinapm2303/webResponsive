@@ -4,11 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const apellidos = sessionStorage.getItem("apellidosUser");
     const fechaNacimiento = sessionStorage.getItem("fechaNacUser");
     const email = sessionStorage.getItem("userEmail");
+    const logoutButton = document.getElementById("logout-btn");
 
     document.getElementById("nombre").value = nombre;
     document.getElementById("apellidos").value = apellidos;
     document.getElementById("fechaNacimiento").value = fechaNacimiento;
     document.getElementById("email").value = email;
+    
+
+    logoutButton.addEventListener("click", function () {
+        sessionStorage.clear()
+        console.log("Sesión eliminada"); // Verificar en consola
+        console.log(sessionStorage.getItem("loggedIn")); // Verificar que 'loggedIn' ya no existe
+
+        window.location.href = "login.html";
+    });
 
     formPerfil.addEventListener("submit", function (event) {
         event.preventDefault(); 

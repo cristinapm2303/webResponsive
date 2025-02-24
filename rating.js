@@ -5,7 +5,7 @@ function getParametrosURL(parametro) {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
-
+const logoutButton = document.getElementById("logout-btn");
     const imgCancion = getParametrosURL('imgCancion');
     const nombreCancion = getParametrosURL('nombreCancion');
     const artistaCancion = getParametrosURL('artistaCancion');
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 document.addEventListener("DOMContentLoaded", function () {
     const formValoracion = document.getElementById("formValoracion");
     const valoracionesGuardadas = document.getElementById("valoracionesGuardadas");
-
+    const logoutButton = document.getElementById("logout-btn");
     // Cargar valoraciones previas desde localStorage
     function cargarValoraciones() {
         valoracionesGuardadas.innerHTML = "";
@@ -66,6 +66,14 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("valoraciones", JSON.stringify(valoraciones));
 
         cargarValoraciones();
+    });
+
+    logoutButton.addEventListener("click", function () {
+        sessionStorage.clear()
+        console.log("Sesión eliminada"); // Verificar en consola
+        console.log(sessionStorage.getItem("loggedIn")); // Verificar que 'loggedIn' ya no existe
+
+        window.location.href = "login.html";
     });
 
     // Eliminar valoracion

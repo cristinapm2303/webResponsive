@@ -35,12 +35,21 @@ function resultadoBusqueda(tracks) {
 
     tracks.forEach(track => {
         const listItem = document.createElement('li');
-        listItem.className = 'list-group-item';
+        listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+        // listItem.innerHTML = `
+        //     <img src="${track.album.images[0].url}" alt="${track.name}" class="img-thumbnail" style="width: 50px; height: 50px;">
+        //     <strong>${track.name}</strong> - ${track.artists[0].name}
+        //     <button class="btn btn-primary" type="button" onclick="valorarCancion('${track.album.images[0].url}','${track.name}','${track.artists[0].name}')">Valorar canción</button>
+        // `;
+
         listItem.innerHTML = `
-            <img src="${track.album.images[0].url}" alt="${track.name}" class="img-thumbnail" style="width: 50px; height: 50px;">
+        <div class="d-flex align-items-center">
+            <img src="${track.album.images[0].url}" alt="${track.name}" class="img-thumbnail" style="width: 50px; height: 50px; margin-right: 10px;">
             <strong>${track.name}</strong> - ${track.artists[0].name}
-            <button class="btn btn-primary" type="button" onclick="valorarCancion('${track.album.images[0].url}','${track.name}','${track.artists[0].name}')">Valorar canción</button>
-        `;
+        </div>
+        <button class="btn btn-primary" type="button" onclick="valorarCancion('${track.album.images[0].url}','${track.name}','${track.artists[0].name}')">Valorar canción</button>
+    `;
+
         results.appendChild(listItem);
     });
 }

@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a href="dashboard.html">
-            <img class="navbar-brand"id="logo" src="img/MUSICAPP.png" style="height: fit-content; width: 50px;"></img>
+            <img class="navbar-brand" id="logo" src="img/MUSICAPP-Photoroom.png" style="height: fit-content; width: 50px;"></img>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,37 +45,27 @@
 
 
     <!-- Contenido de la pantalla de bienvenida -->
-    <div class="container mt-4 text-center">
-        <img class="navbar-brand"id="logo" src="img/MUSICAPP.png" style="height: 200px; width: 200px;"></img><br>
-        <h3>Bienvenido a MusicApp</h3>
-        <p id="userEmail" class="fw-bold"></p>
-        <div class="container mt-5">
+    <div class="container mt-4 text-center" style="width: 100%;">
+      <div class="blueline">
+        <img class="navbar-brand" id="logo" src="img/MUSICAPP-Photoroom.png" style="height: 200px; width: 200px;background-color: rgb(0, 132, 255);"></img><br>
+      </div>
+        
+      <h1 id="welcomeMessage">Bienvenid@ <span id="userName"></span> a MusicApp</h1>
+        <h5 style="color: rgb(0, 132, 255);" id="userEmail" class="fw-bold"></h5>
+        <h6>Descubre, valora y organiza tus canciones favoritas en un solo lugar. 
+          Explora nuevas canciones, crea listas personalizadas.</h6>
+        <div class="container mt-5 text-center">
           <div id="searchScreen">
-              <div class="input-group mb-3">
+            <h4>Busca tus canciones favoritas</h4>
+              <div class="input-group mb-3 justify-content-center gap-2">
                   <input type="text" id="searchInput" class="form-control" placeholder="Buscar canción o artista">
-                  <div class="input-group-append">
+                  <div class="input-group-append ms-auto">
                       <button class="btn btn-primary" type="button" onclick="buscar()">Buscar</button>
                   </div>
               </div>
               <ul id="results" class="list-group text-align left"></ul>
           </div>
         </div>
-        <h2>Tus canciones favoritas</h2>
-        <div class="row" id="favoriteSongs">
-            <!-- Aquí se insertarán canciones con JavaScript -->
-            <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Song 1</h5>
-                  <p class="card-text">Descripción de la canción...</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Song 2</h5>
-                  <p class="card-text">Descripción de la canción...</p>
-                </div>
-              </div>
-            </div>
         </div>
     </div>
 
