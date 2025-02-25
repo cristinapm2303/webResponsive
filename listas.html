@@ -2,46 +2,47 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Listas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="listas.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="dashboard.js"></script>
+    <script src="loginScript.js"></script>
+    <script defer src="listas.js"></script>
 </head>
 
 <body>
-  <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a href="dashboard.html">
-        <img class="navbar-brand" id="logo" src="img/MUSICAPP.png" style="height: fit-content; width: 50px;"></img>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="dashboard.html" id="linkBienvenida">Bienvenida</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="rating.html" id="linkValoraciones">Mis valoraciones</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="listas.html" id="linkListas">Listas Personalizadas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="miperfil.html" id="linkPerfil">Mi perfil</a>
-          </li>
-          <li class="nav-item">
-            <button id="logout-btn" type="button" class="btn btn-primary w-100">Cerrar Sesión</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a href="dashboard.html">
+            <img class="navbar-brand"id="logo" src="img/MUSICAPP.png" style="height: fit-content; width: 50px;"></img>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html" id="linkBienvenida">Bienvenida</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rating.html" id="linkValoraciones">Mis valoraciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="listas.html" id="linkListas">Listas Personalizadas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="miperfil.html" id="linkPerfil">Mi perfil</a>
+              </li>
+              <li class="nav-item">
+                <button id="logout-btn" type="button" class="btn btn-primary w-100" onclick="logOut()" >Cerrar Sesión</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
   <!-- Pantalla de Listas Personalizadas -->
   <div class="container mt-4">
