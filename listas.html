@@ -1,85 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="listas.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="listas.js"></script>
 </head>
+
 <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a href="dashboard.html">
-            <img class="navbar-brand"id="logo" src="img/MUSICAPP.png" style="height: fit-content; width: 50px;"></img>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="dashboard.html" id="linkBienvenida">Bienvenida</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="rating.html" id="linkValoraciones">Mis valoraciones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="listas.html" id="linkListas">Listas Personalizadas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="miperfil.html" id="linkPerfil">Mi perfil</a>
-              </li>
-              <li class="nav-item">
-                <button id="logout-btn" type="button" class="btn btn-primary w-100" >Cerrar Sesión</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-    <!-- Pantalla de Listas Personalizadas -->
-    <div class="container mt-4">
-        <h1>Listas Personalizadas</h1>
-        <p>Crea y organiza tus propias listas de reproducción.</p>
-
-        <form id="formLista">
-            <div class="mb-3">
-                <label for="listaNombre" class="form-label">Nombre de la lista</label>
-                <input type="text" class="form-control" id="listaNombre" required>
-            </div>
-            <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripción</label>
-                <input type="text" class="form-control" id="descripcion" required>
-            </div>
-            <div class="mb-3">
-                <label for="categoria" class="form-label">Categoría</label>
-                <select class="form-control" id="categoria" required>
-                    <option value="">Selecciona una categoría</option>
-                    <option value="Rock">Rock</option>
-                    <option value="Pop">Pop</option>
-                    <option value="Jazz">Jazz</option>
-                    <option value="Clásica">Clásica</option>
-                    <option value="Indie">Indie</option>
-                    <option value="Reggeton">Reggeton</option>
-                    <option value="Flamenco">Flamenco</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="fechaCreacion" class="form-label">Fecha de creación</label>
-                <input type="date" class="form-control" id="fechaCreacion" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Crear lista</button>
-        </form>
-
-        <!-- Listas guardadas -->
-        <h2 class="mt-4">Tus Listas</h2>
-        <ul id="listasGuardadas" class="list-group">
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a href="dashboard.html">
+        <img class="navbar-brand" id="logo" src="img/MUSICAPP.png" style="height: fit-content; width: 50px;"></img>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html" id="linkBienvenida">Bienvenida</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rating.html" id="linkValoraciones">Mis valoraciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="listas.html" id="linkListas">Listas Personalizadas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="miperfil.html" id="linkPerfil">Mi perfil</a>
+          </li>
+          <li class="nav-item">
+            <button id="logout-btn" type="button" class="btn btn-primary w-100">Cerrar Sesión</button>
+          </li>
         </ul>
+      </div>
     </div>
+  </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Pantalla de Listas Personalizadas -->
+  <div class="container mt-4">
+    <h1>Listas Personalizadas</h1>
+    <p>Crea y organiza tus propias listas de reproducción.</p>
+
+    <form id="formLista">
+      <div class="mb-3">
+        <label for="listaNombre" class="form-label">Nombre de la lista</label>
+        <input type="text" class="form-control" id="listaNombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripción</label>
+        <input type="text" class="form-control" id="descripcion" required>
+      </div>
+      <div class="mb-3">
+        <label for="categoria" class="form-label">Categoría</label>
+        <select class="form-control" id="categoria" required>
+          <option value="">Selecciona una categoría</option>
+          <option value="Rock">Rock</option>
+          <option value="Pop">Pop</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Clásica">Clásica</option>
+          <option value="Indie">Indie</option>
+          <option value="Reggeton">Reggeton</option>
+          <option value="Flamenco">Flamenco</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="fechaCreacion" class="form-label">Fecha de creación</label>
+        <input type="date" class="form-control" id="fechaCreacion" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Crear lista</button>
+    </form>
+
+    <!-- Listas guardadas -->
+    <h2 class="mt-4">Tus Listas</h2>
+    <ul id="listasGuardadas" class="list-group">
+    </ul>
+
+    <!--formulario -->
+    <div class="container mt-5 text-center">
+      <div id="searchScreen" style="display: none;"> <!--oculto -->
+          <div class="input-group mb-3 justify-content-center gap-2">
+              <input type="text" id="searchInput" class="form-control" placeholder="Buscar canción o artista">
+              <div class="input-group-append ms-auto">
+                  <button class="btn btn-primary" type="button" onclick="buscar()">Buscar</button>
+              </div>
+          </div>
+          <ul id="results" class="list-group text-align left"></ul>
+      </div>
+  </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </body>
+
 </html>
