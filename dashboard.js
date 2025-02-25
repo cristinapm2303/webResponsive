@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     logoutButton.addEventListener("click", function () {
         sessionStorage.clear()
-        console.log("Sesión eliminada"); // Verificar en consola
-        console.log(sessionStorage.getItem("loggedIn")); // Verificar que 'loggedIn' ya no existe
+        console.log("Sesión eliminada"); 
+        console.log(sessionStorage.getItem("loggedIn")); 
 
         window.location.href = "login.html";
     });

@@ -5,7 +5,6 @@ function getParametrosURL(parametro) {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
-const logoutButton = document.getElementById("logout-btn");
     const imgCancion = getParametrosURL('imgCancion');
     const nombreCancion = getParametrosURL('nombreCancion');
     const artistaCancion = getParametrosURL('artistaCancion');
