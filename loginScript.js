@@ -39,3 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "dashboard.html"; // Redirigir si ya está logueado
     }
 });
+
+function logOut() {
+    sessionStorage.clear();
+    window.location.href = "login.html";
+}
